@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #000;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    background-color: #1c1c1e;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Headings */
+.container h1 {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.container h2 {
+    font-size: 20px;
+    color: #cccccc;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Color Input */
+#colorInput {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Color Code Display */
+#colorID {
+    font-size: 36px;              /* Significantly larger */
+    font-weight: 900;             /* Maximum boldness */
+    margin-bottom: 30px;
+    color: #00ffcc;               /* Bright neon look */
+    background-color: #1a1a1d;    /* Darker contrast background */
+    padding: 20px 30px;           /* More space around text */
+    border-radius: 16px;
+    display: inline-block;
+    letter-spacing: 2px;          /* Spaced out for clarity */
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.2); /* Subtle glow */
+    transition: transform 0.3s ease;
+}
+
+#colorID:hover {
+    transform: scale(1.05);
+}
+
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 15px;
+    border: none;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #005bb5, #00a3cc);
+}
+
+/* Color Section Containers */
+.complememtry-colors,
+.favourites {
+    margin-top: 30px;
+}
+
+#complememtryContainer,
+#favouritesContainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* Color Preview Boxes */
+#complememtryContainer div,
+#favouritesContainers div,
+.color-preview-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 2px solid #444;
+    transition: transform 0.25s ease, background-color 0.3s;
+    cursor: pointer;
+    background-color: #444;
+}
+
+#complememtryContainer div:hover,
+#favouritesContainers div:hover,
+.color-preview-box:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    #complememtryContainer div,
+    #favouritesContainers div,
+    .color-preview-box {
+        width: 50px;
+        height: 50px;
+    }
+}
